@@ -1,63 +1,46 @@
-# here I will implement the project\
-import os
-from pathlib import Path
+import sys
+import os.path
+from pathlib import Path, PurePath
 from shutil import copy2, copytree
-from hashlib import md5, sha256, file_digest
+from enum import StrEnum
+from pprint import pprint
+import logging
 
+logging.basicConfig( # root level, valid for all imports as well
+    handlers = [
+        logging.StreamHandler(sys.stderr),
+        logging.FileHandler(Path(__file__).parent / 'logs' / 'logfile.log')
+    ],
+    level=logging.WARNING,
+    format='%(asctime)s: %(levelname)s@%(filename)s~%(lineno)d: %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+)
 
-source_dir = Path(r'C:\Personal\Downloads\Python\screens')
-target_dir = Path(Path.cwd() / 'target') # NOTE: may need to be changed later when packaged
-print(source_dir, target_dir)
+log = logging.getLogger(__name__)
+log.setLevel(logging.DEBUG)
 
-# get file metadata for comparison
-def get_stats(filepath: Path) -> tuple:
-    stats = filepath.stat()
-    return stats.st_size, stats.st_mtime
+from comparator import Comparator
 
-def get_hash(filepath: Path | str) -> str:
-    with open(filepath, 'rb') as file:
-        checksum = file_digest(file, 'sha256').hexdigest()
-    return checksum
+class Strategy(StrEnum):
+    STATS = 'stats'
+    HASH = 'hash'
 
-source_testfile = Path(r'C:\Personal\Downloads\Python\py.png')
-# print(get_hash(source_testfile))
-# print(get_stats(source_testfile))
+def main():
+    # argparse
+    
+    source_dir = Path(r'C:\Personal\Downloads\Python\screens')
+    target_dir = Path(Path.cwd() / 'target') # NOTE: may need to be changed later when packaged
+    log.info(f'{source_dir} -> {target_dir}')
 
-
-def compare(filepath: Path): # do I need go to this way - it's simple enough?
-    print(f'Comparing {filepath}')
-
-
-# walk target dir: check for superfluous items (deletions)
-for root, dirs, files in target_dir.walk(top_down=False):
-    for dir_ in dirs:
-        sourcepath = source_dir / dir_
-        if not Path.is_dir(sourcepath):
-            print(f'Deleting dir {dir_}') # Path.rmdir()
-    for file_ in files:
-        sourcepath = source_dir / file_
-        if not Path.is_file(sourcepath):
-            print(f'Deleting {file_}') # Path.unlink(missing_ok=False)
-
-
-# walk source dir
-for root, dirs, files in source_dir.walk():
-    for dir_ in dirs:
-        targetpath = target_dir / dir_
-        if not Path.is_dir(targetpath):
-            print(f'Creating dir {dir_}') # shutil.copytree
-    for file_ in files:
-        #compare(root / file_) # pipeline start (1)
-        targetpath = target_dir / file_
-        if Path.is_file(targetpath):
-            if get_stats(root / file_) != get_stats(targetpath):
-                print(f'Replacing {file_}') # shutil.copy2
-        else:
-            print(f'Copying {file_}') # shutil.copy2
+    comparator = Comparator(source_dir, target_dir, Strategy.STATS)
+    for item in comparator.run():
+        print(item.Action, item.source, item.target)
 
 
 
 
+if __name__ == '__main__':
+    main()
 
 
 

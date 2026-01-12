@@ -1,0 +1,9 @@
+2026-01-09 17:46:21: ERROR@main.py~20: WHAT HAVE WE HERE?!
+2026-01-09 18:08:35: INFO@main.py~56: Deleting delfile_indir.txt
+2026-01-09 18:08:35: INFO@main.py~52: Deleting dir deldir
+2026-01-09 18:08:35: INFO@main.py~56: Deleting yeah
+2026-01-09 18:08:35: INFO@main.py~64: Creating dir createdir
+2026-01-09 18:08:35: INFO@main.py~72: Copying Screenshot 2025-11-11 183727.png
+2026-01-09 18:08:35: INFO@main.py~70: Replacing Screenshot 2025-11-11 225208.png
+2026-01-09 18:08:35: INFO@main.py~72: Copying addfile_indir.txt
+2026-01-12 12:09:42: INFO@main.py~27: C:\Personal\Downloads\Python\screens D:\Programming\python\Learning\projects\syncer\syncer\target

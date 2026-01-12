@@ -1,0 +1,3 @@
+# Files to ignore
+.pytest_cache
+__pycache__
