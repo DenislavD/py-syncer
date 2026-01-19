@@ -18,12 +18,13 @@ class Strategy(StrEnum):
 
 class Action(StrEnum):
     COPY = 'copy'
+    REPLACE = 'replace'
     DELETE = 'delete'
 
 @dataclass
 class Diff:
-    source: str | None
-    target: str | None
+    source: Path | None
+    target: Path | None
     Action: Action
 
 class Scanner:
@@ -54,20 +55,20 @@ class Scanner:
 
         for item in sorted(deletions, reverse=True): # need to delete folder contents first
             abspath = self.target_dir / item
-            yield Diff(source=None, target=str(abspath), Action=Action.DELETE)
-
-        for item in sorted(additions):
-            if item.parent not in additions: # whole directory to be copied, skip sub-tree
-                abspath_source = self.source_dir / item
-                abspath_target = self.target_dir / item
-                yield Diff(source=str(abspath_source), target=str(abspath_target), Action=Action.COPY)
+            yield Diff(source=None, target=abspath, Action=Action.DELETE)
 
         for item in sorted(intersection):
             abspath_source = self.source_dir / item
             abspath_target = self.target_dir / item
             if abspath_source.is_file() or abspath_target.is_file():
-                if not self.compare_files(abspath_source, abspath_target): # shutil.copy replaces existing
-                    yield Diff(source=str(abspath_source), target=str(abspath_target), Action=Action.COPY)
+                if not self.compare_files(abspath_source, abspath_target):
+                    yield Diff(source=abspath_source, target=abspath_target, Action=Action.REPLACE)
+
+        for item in sorted(additions):
+            if item.parent not in additions: # whole directory to be copied, skip sub-tree
+                abspath_source = self.source_dir / item
+                abspath_target = self.target_dir / item
+                yield Diff(source=abspath_source, target=abspath_target, Action=Action.COPY)
 
     def compare_files(self, sourcefile, targetfile) -> bool:
         try:
@@ -84,6 +85,7 @@ class Scanner:
 
     @staticmethod
     def get_hash(filepath: Path | str, algo: str='md5') -> str:
+        if filepath.is_dir(): return False
         with open(filepath, 'rb') as file:
             checksum = file_digest(file, algo).hexdigest()
         return checksum
@@ -107,32 +109,3 @@ class Scanner:
 # WindowsPath('Screenshot 2025-11-11 190933.png'), WindowsPath('Screenshot 2025-11-11 225208.png'), WindowsPath('yeah')} 
 # c = Scanner(source, target)
 # print(c)
-
-def info():
-    # walk target dir: check for superfluous items (deletions)
-    # if not in source
-    for root, dirs, files in target_dir.walk(top_down=False):
-        for dir_ in dirs:
-            sourcepath = source_dir / dir_
-            if not Path.is_dir(sourcepath):
-                log.info(f'Deleting dir {dir_}') # Path.rmdir()
-        for file_ in files:
-            sourcepath = source_dir / file_
-            if not Path.is_file(sourcepath):
-                log.info(f'Deleting {file_}') # Path.unlink(missing_ok=False)
-
-
-    # walk source dir
-    for root, dirs, files in source_dir.walk():
-        for dir_ in dirs:
-            targetpath = target_dir / dir_
-            if not Path.is_dir(targetpath):
-                log.info(f'Creating dir {dir_}') # shutil.copytree
-        for file_ in files:
-            #compare(root / file_) # pipeline start (1)
-            targetpath = target_dir / file_
-            if Path.is_file(targetpath):
-                if get_stats(root / file_) != get_stats(targetpath):
-                    log.info(f'Replacing {file_}') # shutil.copy2
-            else:
-                log.info(f'Copying {file_}') # shutil.copy2
