@@ -9,9 +9,6 @@ from pprint import pprint
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
 
-# @TODO:
-# file actions in try/except w/ logging
-
 class Strategy(StrEnum):
     STATS = 'stats'
     HASH = 'hash'
@@ -84,7 +81,7 @@ class Scanner:
         return stats.st_size, stats.st_mtime
 
     @staticmethod
-    def get_hash(filepath: Path | str, algo: str='md5') -> str:
+    def get_hash(filepath: Path, algo: str='md5') -> str:
         if filepath.is_dir(): return False
         with open(filepath, 'rb') as file:
             checksum = file_digest(file, algo).hexdigest()

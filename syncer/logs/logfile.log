@@ -7,188 +7,22 @@
 2026-01-09 18:08:35: INFO@main.py~70: Replacing Screenshot 2025-11-11 225208.png
 2026-01-09 18:08:35: INFO@main.py~72: Copying addfile_indir.txt
 2026-01-12 12:09:42: INFO@main.py~27: C:\Personal\Downloads\Python\screens D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:23:13: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:23:29: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> 
-2026-01-19 14:29:33: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 14:29:33: INFO@handler.py~17: Starting Dry run..
-2026-01-19 14:29:33: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 14:29:33: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 14:29:33: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 14:29:33: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 14:29:33: INFO@handler.py~27: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 14:29:33: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 14:29:33: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-01-19 14:30:03: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 14:30:03: INFO@handler.py~33: Starting Synchronization process..
-2026-01-19 14:31:04: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 14:31:04: INFO@handler.py~33: Starting Synchronization process..
-2026-01-19 14:31:33: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 14:31:33: INFO@handler.py~17: Starting Dry run..
-2026-01-19 14:33:46: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 14:33:46: INFO@handler.py~17: Starting Dry run..
-2026-01-19 14:33:52: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 14:33:52: INFO@handler.py~33: Starting Synchronization process..
-2026-01-19 14:33:52: INFO@handler.py~49: Process completed with 0 differring items handled.
-2026-01-19 16:06:46: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:06:46: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:06:59: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:06:59: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:07:39: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:07:39: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:08:26: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:08:26: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:09:47: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:09:47: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:10:41: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:10:41: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:10:41: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 16:10:41: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 16:10:41: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 16:10:41: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 16:10:41: INFO@handler.py~27: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 16:10:41: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 16:10:41: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-01-19 16:12:39: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:12:39: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:12:39: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 16:12:39: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 16:12:39: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 16:12:39: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 16:12:39: INFO@handler.py~27: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 16:12:39: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 16:29:38: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:29:38: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:29:38: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 16:29:38: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 16:29:38: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 16:29:38: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 16:29:38: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 16:29:38: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 16:29:38: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-01-19 16:30:59: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:30:59: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:30:59: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 16:30:59: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 16:30:59: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 16:30:59: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 16:30:59: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 16:30:59: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 16:30:59: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-01-19 16:31:19: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:31:19: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:31:19: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 16:31:19: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 16:31:19: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 16:31:19: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 16:31:19: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 16:31:19: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-01-19 16:31:19: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 16:33:44: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:33:44: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:33:44: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 16:33:44: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 16:33:44: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 16:33:44: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 16:33:44: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 16:33:44: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-01-19 16:33:44: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 16:34:53: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:34:53: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:34:53: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 16:34:53: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 16:34:53: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 16:34:53: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 16:34:53: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 16:34:53: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-01-19 16:34:53: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 16:35:39: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:35:39: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 16:35:39: INFO@handler.py~40: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 16:35:39: INFO@handler.py~37: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 16:35:39: INFO@handler.py~37: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 16:35:39: INFO@handler.py~51: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 16:35:39: INFO@handler.py~54: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 16:35:39: INFO@handler.py~45: Replacing file: C:\Personal\Downloads\Python\screens\modified.png
-2026-01-19 16:35:39: INFO@handler.py~45: Replacing file: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 16:36:52: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:36:52: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:36:52: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 16:37:58: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:37:58: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 16:37:58: INFO@handler.py~45: Replacing file: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 16:45:55: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:45:55: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 16:45:55: INFO@handler.py~45: Replacing file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 16:47:36: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:47:36: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:47:36: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-01-19 16:47:36: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 16:54:46: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:54:46: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:54:46: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 16:54:46: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-01-19 16:56:33: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:56:33: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:57:20: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 16:57:20: INFO@handler.py~17: Starting Dry run..
-2026-01-19 16:57:20: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 16:57:20: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-01-19 17:10:37: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:10:37: INFO@handler.py~17: Starting Dry run..
-2026-01-19 17:10:37: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 17:10:37: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-01-19 17:11:52: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:11:52: INFO@handler.py~17: Starting Dry run..
-2026-01-19 17:11:52: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 17:11:52: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-01-19 17:11:58: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:11:58: INFO@handler.py~17: Starting Dry run..
-2026-01-19 17:12:51: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:12:51: INFO@handler.py~17: Starting Dry run..
-2026-01-19 17:12:56: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:12:56: INFO@handler.py~17: Starting Dry run..
-2026-01-19 17:12:56: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 17:12:56: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-01-19 17:13:01: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:13:01: INFO@handler.py~17: Starting Dry run..
-2026-01-19 17:13:01: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 17:13:01: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-01-19 17:21:49: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:21:49: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 17:21:49: INFO@handler.py~45: Replacing file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 17:23:31: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:23:31: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 17:23:31: INFO@handler.py~57: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 17:23:31: INFO@handler.py~63: Process completed with 1 differring items handled.
-2026-01-19 17:23:50: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:23:50: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 17:23:50: INFO@handler.py~63: Process completed with 0 differring items handled.
-2026-01-19 17:25:11: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:25:11: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 17:25:11: INFO@handler.py~40: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-01-19 17:25:11: INFO@handler.py~37: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-19 17:25:11: INFO@handler.py~37: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-19 17:25:11: INFO@handler.py~45: Replacing file: D:\Programming\python\Learning\projects\syncer\syncer\target\modified.png
-2026-01-19 17:27:07: INFO@handler.py~45: Replacing file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 17:28:43: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:28:43: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 17:28:43: INFO@handler.py~58: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-19 17:28:43: INFO@handler.py~61: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 17:28:43: INFO@handler.py~58: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 17:28:43: INFO@handler.py~64: Process completed with 3 differring items handled.
-2026-01-19 17:29:10: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:29:10: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 17:29:10: INFO@handler.py~64: Process completed with 0 differring items handled.
-2026-01-19 17:29:32: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:29:32: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 17:29:32: INFO@handler.py~45: Replacing file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 17:30:42: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:30:42: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 17:30:42: INFO@handler.py~45: Replacing file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 17:32:06: INFO@main.py~41: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-19 17:32:06: INFO@handler.py~32: Starting Synchronization process..
-2026-01-19 17:32:06: INFO@handler.py~45: Replacing file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
-2026-01-19 17:32:06: INFO@handler.py~53: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-19 17:32:06: INFO@handler.py~65: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-19 17:32:06: INFO@handler.py~65: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-01-19 17:32:06: INFO@handler.py~68: Process completed with 3 differring items handled.
+2026-01-23 17:32:36: INFO@main.py~43: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-01-23 17:32:36: INFO@handler.py~17: Starting Dry run..
+2026-01-23 17:32:36: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
+2026-01-23 17:32:36: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
+2026-01-23 17:32:36: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
+2026-01-23 17:32:36: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\modified.png
+2026-01-23 17:32:36: INFO@handler.py~27: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
+2026-01-23 17:32:36: INFO@handler.py~27: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
+2026-01-23 17:32:36: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
+2026-01-23 17:35:14: INFO@main.py~43: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-01-23 17:35:14: INFO@handler.py~17: Starting Dry run..
+2026-01-23 17:35:14: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
+2026-01-23 17:35:14: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
+2026-01-23 17:35:14: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
+2026-01-23 17:35:14: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\modified.png
+2026-01-23 17:35:14: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
+2026-01-23 17:35:14: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
+2026-01-23 17:35:14: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
+2026-01-23 17:35:14: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt

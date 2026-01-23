@@ -36,22 +36,24 @@ def main():
     args = parser.parse_args()
     print(args)
     
-    source_dir = Path(r'C:\Personal\Downloads\Python\screens')
-    target_dir = Path(Path.cwd() / 'target') # NOTE: may need to be changed later when packaged
+    source_dir = Path(args.source).absolute() # Path(r'C:\Personal\Downloads\Python\screens')
+    target_dir = Path(args.target).absolute() # Path(Path.cwd() / 'target')
+    if not source_dir.is_dir(): raise ValueError('Source must be a valid directory path.')
+    if not target_dir.is_dir(): raise ValueError('Target must be a valid directory path.')
     log.info(f'{source_dir} -> {target_dir}')
 
     comparison_strategy = args.hash or Strategy.STATS
     scanner = Scanner(source_dir, target_dir, comparison_strategy)
     item_generator = scanner.run()
     
-    client = Client.FILESYSTEM # DRYRUN or FILESYSTEM
+    client = Client.DRYRUN if args.dry_run or True else Client.FILESYSTEM
     handler_fn = HANDLER[client]
-    handler_fn(item_generator)
+    handler_fn(item_generator, args.confirm, args.delete)
 
 
 
 if __name__ == '__main__':
     main()
 
-
+# py main.py "C:\Personal\Downloads\Python\screens" target -d
 

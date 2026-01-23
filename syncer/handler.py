@@ -13,58 +13,56 @@ class Client(StrEnum):
     DRYRUN = 'dry-run'
     FILESYSTEM = 'filesystem'
 
-def execute_dryrun(gen):
+def execute_dryrun(gen, allow_replace, allow_delete):
     log.info('Starting Dry run..')
     for item in gen:
-        if item.Action == Action.DELETE and True:
+        if item.Action == Action.DELETE and allow_delete:
             if item.target.is_dir():
                 log.info(f'Deleting directory: {item.target}')
             else:
                 log.info(f'Deleting file: {item.target}')
-        else:
+        elif item.Action == Action.REPLACE and allow_replace or item.Action == Action.COPY:
             if item.source.is_dir():
                 log.info(f'Copying directory recursively: {item.source}')
             else:
                 log.info(f'Copying file: {item.source}')            
 
 
-def execute_filesystem(gen):
+# Helper action functions
+def node_delete(path):
+    if path.is_dir():
+        log.info(f'> Deleting directory: {path}')
+        path.rmdir()
+    else:
+        log.info(f'> Deleting file: {path}')
+        path.unlink(missing_ok=False)
+
+def node_copy(sourcepath, targetpath):
+    if sourcepath.is_dir():
+        log.info(f'> Copying directory recursively: {sourcepath}')
+        copytree(sourcepath, targetpath, dirs_exist_ok=True)
+    else:
+        log.info(f'> Copying file: {sourcepath}')
+        copy2(sourcepath, targetpath)
+
+
+def execute_filesystem(gen, allow_replace, allow_delete):
     log.info('Starting Synchronization process..')
     count = 0
     for item in gen:
-        if item.Action == Action.DELETE and True: # DELETES FILES !!
-            if item.target.is_dir():
-                log.info(f'Deleting directory: {item.target}')
-                item.target.rmdir()
-            else:
-                log.info(f'Deleting file: {item.target}')
-                item.target.unlink(missing_ok=False)
+        if item.Action == Action.DELETE and allow_delete: # DELETES FILES !!
+            node_delete(item.target)
             count += 1
-
-        elif item.Action == Action.REPLACE: # DELETES FILES !!
-            log.info(f'Replacing file: {item.target}')
-            # remove old folder/file
-            if item.target.is_dir():
-                item.target.rmdir()
-            else:
-                item.target.unlink(missing_ok=False)
-            # now copy cleanly - @TODO needs refactoring ~ delete_node, copy_node
-            if item.source.is_dir():
-                log.info(f'Copying directory recursively: {item.source}')
-                copytree(item.source, item.target, dirs_exist_ok=True)
-            else:
-                log.info(f'Copying file: {item.source}')
-                copy2(item.source, item.target)
+        elif item.Action == Action.REPLACE and allow_replace: # DELETES FILES !!
+            if item.source.is_dir() != item.target.is_dir():
+                # remove target file/dir, copy-replace doesn't work with different obj types
+                node_delete(item.target)
+            node_copy(item.source, item.target)
             count += 1
-
-        elif item.Action == Action.COPY:
-            if item.source.is_dir():
-                log.info(f'Copying directory recursively: {item.source}')
-                copytree(item.source, item.target, dirs_exist_ok=True)
-            else:
-                log.info(f'Copying file: {item.source}')
-                copy2(item.source, item.target)
+        elif item.Action == Action.COPY and item.target.parent.is_dir():
+            node_copy(item.source, item.target)
             count += 1
+        
     log.info(f'Process completed with {count} differring items handled.')
 
 
@@ -72,38 +70,3 @@ HANDLER: dict[Client, Callable] = {
     Client.DRYRUN: execute_dryrun,
     Client.FILESYSTEM: execute_filesystem,
 }
-
-
-
-
-
-
-
-def info():
-    # walk target dir: check for superfluous items (deletions)
-    # if not in source
-    for root, dirs, files in target_dir.walk(top_down=False):
-        for dir_ in dirs:
-            sourcepath = source_dir / dir_
-            if not Path.is_dir(sourcepath):
-                log.info(f'Deleting dir {dir_}') # Path.rmdir()
-        for file_ in files:
-            sourcepath = source_dir / file_
-            if not Path.is_file(sourcepath):
-                log.info(f'Deleting {file_}') # Path.unlink(missing_ok=False)
-
-
-    # walk source dir
-    for root, dirs, files in source_dir.walk():
-        for dir_ in dirs:
-            targetpath = target_dir / dir_
-            if not Path.is_dir(targetpath):
-                log.info(f'Creating dir {dir_}') # shutil.copytree
-        for file_ in files:
-            #compare(root / file_) # pipeline start (1)
-            targetpath = target_dir / file_
-            if Path.is_file(targetpath):
-                if get_stats(root / file_) != get_stats(targetpath):
-                    log.info(f'Replacing {file_}') # shutil.copy2
-            else:
-                log.info(f'Copying {file_}') # shutil.copy2
