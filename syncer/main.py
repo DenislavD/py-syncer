@@ -13,12 +13,12 @@ logging.basicConfig( # root level, valid for all imports as well
     datefmt='%Y-%m-%d %H:%M:%S',
 )
 
-log = logging.getLogger(__name__)
-log.setLevel(logging.DEBUG)
+logging.getLogger('syncer').setLevel(logging.DEBUG)
 
-from scanner import Scanner, Strategy
-from handler import Client, HANDLER
+from .scanner import Scanner, Strategy
+from .handler import Client, HANDLER
 
+log = logging.getLogger('syncer.main')
 
 def main():
     # argparse
@@ -46,7 +46,7 @@ def main():
     scanner = Scanner(source_dir, target_dir, comparison_strategy)
     item_generator = scanner.run()
     
-    client = Client.DRYRUN if args.dry_run or True else Client.FILESYSTEM
+    client = Client.DRYRUN if args.dry_run else Client.FILESYSTEM
     handler_fn = HANDLER[client]
     handler_fn(item_generator, args.confirm, args.delete)
 
@@ -56,4 +56,6 @@ if __name__ == '__main__':
     main()
 
 # py main.py "C:\Personal\Downloads\Python\screens" target -d
+# .\venvsyncer\Scripts\activate
+# syncer "C:\Personal\Downloads\Python\screens" syncer\target -d
 

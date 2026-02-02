@@ -20,9 +20,15 @@
 2026-01-23 17:35:14: INFO@handler.py~17: Starting Dry run..
 2026-01-23 17:35:14: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
 2026-01-23 17:35:14: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-01-23 17:35:14: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-01-23 17:35:14: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-01-23 17:35:14: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-01-23 17:35:14: INFO@handler.py~26: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-01-23 17:35:14: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-01-23 17:35:14: INFO@handler.py~28: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
+2026-01-23 17:35:14: INFO@handler.py~21: Deleting directory: 
+2026-02-02 19:09:46: INFO@main.py~43: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-02-02 19:09:46: INFO@handler.py~16: Starting Dry run..
+2026-02-02 19:09:46: INFO@handler.py~22: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
+2026-02-02 19:09:46: INFO@handler.py~20: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
+2026-02-02 19:09:46: INFO@handler.py~20: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
+2026-02-02 19:09:46: INFO@handler.py~27: Copying file: C:\Personal\Downloads\Python\screens\modified.png
+2026-02-02 19:09:46: WARNING@scanner.py~92: No access rights for C:\Personal\Downloads\Python\screens\norights.txt, skipping file.
+2026-02-02 19:09:46: INFO@handler.py~25: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
+2026-02-02 19:09:46: INFO@handler.py~25: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
+2026-02-02 19:09:46: INFO@handler.py~27: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
+2026-02-02 19:09:46: INFO@handler.py~27: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt

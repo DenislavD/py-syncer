@@ -6,8 +6,7 @@ from enum import StrEnum
 from dataclasses import dataclass
 from pprint import pprint
 
-log = logging.getLogger(__name__)
-log.setLevel(logging.DEBUG)
+log = logging.getLogger('syncer.scanner')
 
 class Strategy(StrEnum):
     STATS = 'stats'
@@ -72,7 +71,9 @@ class Scanner:
             return self.comparison_fn(sourcefile) == self.comparison_fn(targetfile)
         except AttributeError as exc:
             raise NotImplementedError(exc) from None
-    
+        except PermissionError:
+            return True # skip files
+
 
     # get file metadata for comparison
     @staticmethod
@@ -83,8 +84,14 @@ class Scanner:
     @staticmethod
     def get_hash(filepath: Path, algo: str='md5') -> str:
         if filepath.is_dir(): return False
-        with open(filepath, 'rb') as file:
-            checksum = file_digest(file, algo).hexdigest()
+        
+        try:
+            with open(filepath, 'rb') as file:
+                checksum = file_digest(file, algo).hexdigest()
+        except PermissionError as e:
+            log.warning(f'No access rights for {filepath}, skipping file.')
+            raise PermissionError
+        
         return checksum
 
     @staticmethod

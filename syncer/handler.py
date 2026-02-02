@@ -4,10 +4,9 @@ from shutil import copy2, copytree
 from typing import Callable
 from pprint import pprint
 
-from scanner import Action
+from .scanner import Action
 
-log = logging.getLogger(__name__)
-log.setLevel(logging.DEBUG)
+log = logging.getLogger('syncer.handler')
 
 class Client(StrEnum):
     DRYRUN = 'dry-run'

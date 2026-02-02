@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "syncer/__init__.py"
+
+[project]
+name = "syncer"
+version = "0.5"
+authors = [
+    { name="Denislav Dimitrov", email="denislav.dimitrov@mail.bg" },
+]
+description = "Incremental File Syncer with threading"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+syncer = "syncer.main:main"
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["syncer/tests"]
+cache_dir = ".pytest_cache"
+
