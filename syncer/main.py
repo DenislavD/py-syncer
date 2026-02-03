@@ -36,10 +36,15 @@ def main():
     args = parser.parse_args()
     print(args)
     
-    source_dir = Path(args.source).absolute() # Path(r'C:\Personal\Downloads\Python\screens')
-    target_dir = Path(args.target).absolute() # Path(Path.cwd() / 'target')
-    if not source_dir.is_dir(): raise ValueError('Source must be a valid directory path.')
-    if not target_dir.is_dir(): raise ValueError('Target must be a valid directory path.')
+    # normalize source and target directories
+    source_dir = Path(args.source).absolute()
+    if not source_dir.is_dir():
+        log.error(f'{source_dir} must be a valid directory path.')
+        raise SystemExit()
+    target_dir = Path(args.target).absolute()
+    if not target_dir.is_dir():
+        log.error(f'{target_dir} must be a valid directory path.')
+        raise SystemExit()
     log.info(f'{source_dir} -> {target_dir}')
 
     comparison_strategy = args.hash or Strategy.STATS

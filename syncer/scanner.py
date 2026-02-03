@@ -89,7 +89,7 @@ class Scanner:
             with open(filepath, 'rb') as file:
                 checksum = file_digest(file, algo).hexdigest()
         except PermissionError as e:
-            log.warning(f'No access rights for {filepath}, skipping file.')
+            log.warning(f'No access rights for {filepath} , skipping file.')
             raise PermissionError
         
         return checksum
