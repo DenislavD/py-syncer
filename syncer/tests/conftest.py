@@ -3,6 +3,8 @@ import pytest
 from pathlib import Path
 from shutil import copy2
 
+from .. scanner import Scanner, Strategy
+
 ASSETS_DIR = Path('syncer', 'tests', 'assets')
 
 @pytest.fixture(scope="session")

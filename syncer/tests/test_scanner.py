@@ -1,9 +1,8 @@
 import pytest
 from pathlib import Path
-
 from .. scanner import Scanner, Strategy
 
-# @TODO large file test (300MB) and no permissions on Linux (how?)
+# Missing a large file test (300MB) and no permissions on Linux (how?)
 
 TESTFILE = Path(r"C:\Personal\Downloads\Python\screens\norights.txt")
 TESTTARGET = Path('syncer', 'logs')
@@ -45,7 +44,7 @@ def test_comparison_tmpdir(source_dir, target_dir):
         Path('deldir', '1'),
         Path('deldir')
     ]
-
+    
     # should replace the following items
     assert Path('modified.jpg') in actions['replace']
     assert Path('yeah') in actions['replace']
@@ -66,3 +65,15 @@ def test_comparison_tmpdir(source_dir, target_dir):
 #     assert 1 == 1
 
 
+""" actions dict for reference:
+
+{<Action.COPY: 'copy'>: [WindowsPath('createdir'),                                                                                                                                                         
+                         WindowsPath('norights.txt'),                                                                                                                                                                                   
+                         WindowsPath('Screenshot 2025-11-11 183727.png'),                                                                                                                                                               
+                         WindowsPath('yeah/new.txt')],                                                                                                                                                                                  
+ <Action.DELETE: 'delete'>: [WindowsPath('deldir/delfile_indir.txt'),                                                                                                                                                                   
+                             WindowsPath('deldir/1'),                                                                                                                                                                                   
+                             WindowsPath('deldir')],                                                                                                                                                                                    
+ <Action.REPLACE: 'replace'>: [WindowsPath('modified.jpg'),                                                                                                                                                                             
+                               WindowsPath('yeah')]} 
+"""

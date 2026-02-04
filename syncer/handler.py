@@ -3,7 +3,6 @@ from enum import StrEnum
 from shutil import copy2, copytree
 import os
 from typing import Callable
-from pprint import pprint
 
 from .scanner import Action
 
