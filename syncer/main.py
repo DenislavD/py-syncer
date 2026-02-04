@@ -30,9 +30,10 @@ def main():
     parser.add_argument('-x', '--delete', action='store_true', help='Confirm deleting extra files in target.')
     parser.add_argument('--hash', action='store_const', const=Strategy.HASH,
         help='Use hash to compare files instead of metadata.')
+    parser.add_argument('--exclude', default='', type=str,
+        help='Patterns to exclude from search. Example: .git|__pycache__|logs') # .git, __pycache__ ..
     # @TODO
     parser.add_argument('--workers', help='Use more CPU threads.')
-    parser.add_argument('--exclude', help='Patterns to exclude from search. Example: .git|__pycache__|logs') # .git, __pycache__ ..
     args = parser.parse_args()
     print(args)
     
@@ -40,15 +41,15 @@ def main():
     source_dir = Path(args.source).absolute()
     if not source_dir.is_dir():
         log.error(f'{source_dir} must be a valid directory path.')
-        raise SystemExit()
+        raise SystemExit
     target_dir = Path(args.target).absolute()
     if not target_dir.is_dir():
         log.error(f'{target_dir} must be a valid directory path.')
-        raise SystemExit()
+        raise SystemExit
     log.info(f'{source_dir} -> {target_dir}')
 
     comparison_strategy = args.hash or Strategy.STATS
-    scanner = Scanner(source_dir, target_dir, comparison_strategy)
+    scanner = Scanner(source_dir, target_dir, comparison_strategy, args.exclude)
     item_generator = scanner.run()
     
     client = Client.DRYRUN if args.dry_run else Client.FILESYSTEM
@@ -63,4 +64,4 @@ if __name__ == '__main__':
 # py main.py "C:\Personal\Downloads\Python\screens" target -d
 # .\venvsyncer\Scripts\activate
 # syncer "C:\Personal\Downloads\Python\screens" syncer\target -d
-
+# syncer "C:\Personal\Downloads\Python\screens" syncer\target -d --exclude ".git|__pycache__|logs" -x -c

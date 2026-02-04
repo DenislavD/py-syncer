@@ -1,5 +1,6 @@
 import pytest
 from pathlib import Path
+
 from .. scanner import Scanner, Strategy
 
 # Missing a large file test (300MB) and no permissions on Linux (how?)
@@ -52,6 +53,15 @@ def test_comparison_tmpdir(source_dir, target_dir):
     # should just copy the following items
     assert Path('createdir') in actions['copy']
     assert Path('Screenshot 2025-11-11 183727.png') in actions['copy']
+
+def test_exclude_pattern():
+    files = Scanner.get_items_in_dir(Path('.'), exclude='.git|__pycache__|logs|venv|README.md')
+
+    assert all('.git' not in str(file) for file in files)
+    assert all('logs' not in str(file) for file in files)
+    assert all('venv' not in str(file) for file in files)
+    assert all('README.md' not in str(file) for file in files)
+
 
 
 # def test_fixtures(source_dir, target_dir):
