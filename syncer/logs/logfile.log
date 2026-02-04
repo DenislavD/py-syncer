@@ -7,52 +7,23 @@
 2026-01-09 18:08:35: INFO@main.py~70: Replacing Screenshot 2025-11-11 225208.png
 2026-01-09 18:08:35: INFO@main.py~72: Copying addfile_indir.txt
 2026-01-12 12:09:42: INFO@main.py~27: C:\Personal\Downloads\Python\screens D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:23:13: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:23:29: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:35:26: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:36:42: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:37:13: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:40:24: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:43:36: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 11:45:54: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:12:47: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:15:41: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:16:41: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:19:34: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:19:56: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:20:04: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:20:22: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:20:45: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:21:15: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:21:20: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:22:13: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:24:57: INFO@main.py~37: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:38:30: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:38:55: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:39:00: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 12:59:54: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:00:02: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:08:26: INFO@main.py~33: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:09:57: INFO@main.py~27: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:13:57: INFO@main.py~27: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:27:39: INFO@handler.py~15: Starting Dry run..
-2026-01-13 13:27:39: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:27:47: INFO@handler.py~15: Starting Dry run..
-2026-01-13 13:27:47: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:27:55: INFO@handler.py~15: Starting Dry run..
-2026-01-13 13:27:55: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:27:55: INFO@handler.py~15: Starting Dry run..
-2026-01-13 13:28:13: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:28:13: INFO@handler.py~15: Starting Dry run..
-2026-01-13 13:28:24: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:28:24: INFO@handler.py~19: Starting Synchronization process..
-2026-01-13 13:29:02: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:29:12: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:29:22: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:29:22: INFO@handler.py~15: Starting Dry run..
-2026-01-13 13:30:45: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:30:45: INFO@handler.py~15: Starting Dry run..
-2026-01-13 13:30:55: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:30:55: INFO@handler.py~19: Starting Synchronization process..
-2026-01-13 13:32:32: INFO@main.py~28: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-01-13 13:32:32: INFO@handler.py~15: Starting Dry run..
+2026-01-23 17:32:36: INFO@main.py~43: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-01-23 17:32:36: INFO@handler.py~17: Starting Dry run..
+2026-01-23 17:32:36: INFO@handler.py~23: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
+2026-01-23 17:32:36: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
+2026-01-23 17:32:36: INFO@handler.py~21: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
+2026-01-23 17:32:36: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\modified.png
+2026-01-23 17:32:36: INFO@handler.py~27: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
+2026-01-23 17:32:36: INFO@handler.py~27: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
+2026-01-23 17:32:36: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
+2026-02-03 13:17:32: INFO@main.py~48: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-02-03 13:17:32: INFO@handler.py~68: Starting Synchronization process..
+2026-02-03 13:17:32: INFO@handler.py~59: > Copying file: C:\Personal\Downloads\Python\screens\norights.txt
+2026-02-03 13:17:32: WARNING@handler.py~63: No access rights for C:\Personal\Downloads\Python\screens\norights.txt , skipping item.
+2026-02-03 13:17:32: INFO@handler.py~59: > Copying file: C:\Personal\Downloads\Python\screens\openfile.txt
+2026-02-03 13:17:32: INFO@handler.py~84: Process completed with 1 differring items handled.
+2026-02-03 13:20:07: INFO@main.py~48: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-02-03 13:20:07: INFO@handler.py~68: Starting Synchronization process..
+2026-02-03 13:20:07: INFO@handler.py~59: > Copying file: C:\Personal\Downloads\Python\screens\norights.txt
+2026-02-03 13:20:07: WARNING@handler.py~63: No access rights for C:\Personal\Downloads\Python\screens\norights.txt , skipping item.
+2026-02-03 13:20:07: INFO@handler.py~84: Process completed with 0 differring items handled.
