@@ -1,27 +1,80 @@
-<h3>Project 3 - Incremental File Syncer</h3>
+# Syncer
 
-Purpose: Sync files from source directory to target directory with incremental updates (only copy changed files).</br>
-Not a full rsync, but a simplified, reliable tool.
+A lightweight incremental file syncer for directories. Copies only changed files from source to target — a simplified, reliable alternative to rsync.
 
-</br>
-<h5>Features:</h5>
-<li>Scan source and target, compute file metadata (size, mtime, and optional hash).</li>
-<li>Decide action per file: skip, copy/update, delete (if --delete specified).</li>
-<li>CLI flags: --dry-run, --hash (use md5/sha1 to detect changes), --workers (parallel copy), --exclude patterns.</li>
-<li>Logging for actions and summary report.</li>
-<li>Safety: default no deletes, require --confirm for destructive ops.</li>
-<li>Tests: unit tests for the decision logic (simulate file metadata), integration test with temp directories.</li>
-<li>Packaging: syncer CLI.</li>
+## Features
 
-</br>
-<h5>Stretch Features (for later):</h5>
-<li>Use concurrent.futures to parallelize copying.</li>
-<li>Implement resume support for partially copied files (temp filenames + atomic rename).</li>
-<li>Use checksums only for files above size threshold to save time.</li>
+- **Incremental sync** — skips unchanged files, copies only what's new or modified
+- **Two comparison modes** — fast metadata check (size + mtime) or content hash (MD5/SHA1)
+- **Dry-run mode** — preview all planned actions without touching the filesystem
+- **Safe by default** — no deletes unless explicitly enabled with `--delete --confirm`
+- **Exclusion patterns** — skip files/directories matching given patterns
+- **Logging** — all actions logged to stderr and `logs/logfile.log`
 
-<h5>Current status: Implementing core functionality</h5>
-Acceptance:</br>
-<li>python -m syncer --dry-run lists planned actions without modifying target.</li>
-<li>With --confirm, it performs copy actions; with --delete --confirm it also deletes extras.</li>
-<li>Tests for key behaviors.</li>
-</br>
+## Installation
+
+Requires Python >= 3.11.
+
+```bash
+.\\venvsyncer\\Scripts\\activate # Windows
+source venvsyncer/bin/activate # Linux/Mac
+pip install -e .
+```
+
+## Usage
+
+```bash
+syncer <source-dir> <target-dir> [options]
+```
+
+### Options
+
+| Flag | Description |
+|---|---|
+| `-d`, `--dry-run` | List planned actions without modifying files |
+| `-c`, `--confirm` | Confirm replacing existing files |
+| `-x`, `--delete` | Delete extra files in target (requires `--confirm`) |
+| `--hash` | Use hash comparison instead of metadata |
+| `--exclude PATTERNS` | Pipe-separated exclude patterns |
+
+### Examples
+
+Preview what would be synced:
+
+```bash
+syncer "C:\source" "C:\target" -d
+```
+
+Sync with deletions and exclusions:
+
+```bash
+syncer "C:\source" "C:\target" -x -c --exclude ".git|__pycache__|logs"
+```
+
+## Project Structure
+
+```
+syncer/
+├── syncer/
+│   ├── main.py          # CLI entry point
+│   ├── scanner.py       # Directory scanning & comparison
+│   ├── handler.py       # File operation handlers
+│   └── tests/           # Unit & integration tests
+├── pyproject.toml
+├── LICENSE
+└── README.md
+```
+
+## Running Tests
+
+```bash
+pytest
+```
+
+## Roadmap
+
+- [ ] Parallel copying with `concurrent.futures` (`--workers`)
+
+## License
+
+[MIT](LICENSE) — Denislav Dimitrov

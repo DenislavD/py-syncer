@@ -13,7 +13,7 @@ authors = [
 ]
 description = "Incremental File Syncer with threading"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 [project.scripts]
 syncer = "syncer.main:main"

@@ -61,7 +61,13 @@ def main():
 if __name__ == '__main__':
     main()
 
+# initial development
 # py main.py "C:\Personal\Downloads\Python\screens" target -d
+
+# quick and dirty after packaged
+# python -m syncer.main source target -d
+
+# standard
 # .\venvsyncer\Scripts\activate
 # syncer "C:\Personal\Downloads\Python\screens" syncer\target -d
 # syncer "C:\Personal\Downloads\Python\screens" syncer\target -d --exclude ".git|__pycache__|logs" -x -c

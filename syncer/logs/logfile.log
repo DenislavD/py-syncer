@@ -48,3 +48,4 @@
 2026-02-04 16:35:16: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
 2026-02-04 16:35:16: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\norights.txt
 2026-02-04 16:35:16: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
+2026-02-09 12:54:02: ERROR@main.py~43: D:\Programming\python\Learning\projects\syncer\a must be a valid directory path.
