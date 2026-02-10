@@ -4,7 +4,7 @@ from pathlib import Path
 from hashlib import sha1, md5, file_digest
 from enum import StrEnum
 from dataclasses import dataclass
-from pprint import pprint
+import re
 
 log = logging.getLogger('syncer.scanner')
 
@@ -30,11 +30,14 @@ class Scanner:
     def __repr__(self):
         return f'Scanner with {len(self.source_set)=} and {len(self.target_set)=} items.'
 
-    def __init__(self, source: Path, target: Path, strategy=Strategy.STATS):
+    def __init__(self, source: Path, target: Path, strategy=Strategy.STATS, exclude=''):
         self.source_dir = source
         self.target_dir = target
-        self.source_set = Scanner.get_filelist_in_dir(source)
-        self.target_set = Scanner.get_filelist_in_dir(target)
+        self.source_set = Scanner.get_items_in_dir(source, exclude)
+        if not self.source_set:
+            log.error(f'Source directory must not be empty. Exiting program.')
+            raise SystemExit
+        self.target_set = Scanner.get_items_in_dir(target, exclude)
         strategy_map = {
             Strategy.STATS: Scanner.get_stats,
             Strategy.HASH: Scanner.get_hash,
@@ -49,9 +52,10 @@ class Scanner:
         additions = self.source_set - self.target_set
         intersection = self.source_set & self.target_set
 
-        for item in sorted(deletions, reverse=True): # need to delete folder contents first
-            abspath = self.target_dir / item
-            yield Diff(source=None, target=abspath, Action=Action.DELETE)
+        for item in sorted(deletions):
+            if item.parent not in deletions: # whole directory to be deleted, skip sub-tree
+                abspath = self.target_dir / item
+                yield Diff(source=None, target=abspath, Action=Action.DELETE)
 
         for item in sorted(intersection):
             abspath_source = self.source_dir / item
@@ -95,21 +99,15 @@ class Scanner:
         return checksum
 
     @staticmethod
-    def get_filelist_in_dir(mydir: Path) -> set:
+    def get_items_in_dir(mydir: Path, exclude='') -> set:
         if not mydir.is_dir():
             log.error(f'{mydir} does not exist: please create it first. Exiting program.')
-            sys.exit()
+            raise SystemExit
         
-        filelist = { path.relative_to(mydir) for path in mydir.rglob('*') }
+        pattern = '|'.join(map(re.escape, exclude.split('|')))
+        filelist = { path.relative_to(mydir) for path in mydir.rglob('*')
+                    if not pattern or not re.search(pattern, str(path)) }
+
         if not filelist:
             log.warning(f'{mydir} is empty.')
         return filelist
-
-
-# test data
-# source = {WindowsPath('createdir'), WindowsPath('createdir/addfile_indir.txt'), WindowsPath('Screenshot 2025-11-11 183727.png'), 
-# WindowsPath('Screenshot 2025-11-11 190933.png'), WindowsPath('Screenshot 2025-11-11 225208.png')}
-# target = {WindowsPath('deldir'), WindowsPath('deldir/1'), WindowsPath('deldir/delfile_indir.txt'), 
-# WindowsPath('Screenshot 2025-11-11 190933.png'), WindowsPath('Screenshot 2025-11-11 225208.png'), WindowsPath('yeah')} 
-# c = Scanner(source, target)
-# print(c)
