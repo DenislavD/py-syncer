@@ -41,8 +41,6 @@ def test_comparison_tmpdir(source_dir, target_dir):
 
     # should delete items in order starting from the deepest level
     assert actions['delete'] == [
-        Path('deldir', 'delfile_indir.txt'), # need Path objs to ensure cross-platform
-        Path('deldir', '1'),
         Path('deldir')
     ]
     

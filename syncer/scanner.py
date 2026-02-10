@@ -52,9 +52,10 @@ class Scanner:
         additions = self.source_set - self.target_set
         intersection = self.source_set & self.target_set
 
-        for item in sorted(deletions, reverse=True): # need to delete folder contents first
-            abspath = self.target_dir / item
-            yield Diff(source=None, target=abspath, Action=Action.DELETE)
+        for item in sorted(deletions):
+            if item.parent not in deletions: # whole directory to be deleted, skip sub-tree
+                abspath = self.target_dir / item
+                yield Diff(source=None, target=abspath, Action=Action.DELETE)
 
         for item in sorted(intersection):
             abspath_source = self.source_dir / item

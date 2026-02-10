@@ -1,6 +1,6 @@
 import logging
 from enum import StrEnum
-from shutil import copy2, copytree
+from shutil import copy2, copytree, rmtree
 import os
 from typing import Callable
 
@@ -40,7 +40,7 @@ def node_delete(path) -> bool:
     try:
         if path.is_dir():
             log.info(f'> Deleting directory: {path}')
-            path.rmdir()
+            rmtree(path)
         else:
             log.info(f'> Deleting file: {path}')
             path.unlink(missing_ok=False)

@@ -29,10 +29,10 @@ def test_replace_items(diff_obj_generator, target_dir, source_dir):
     assert len(list(children)) > 0 # children copied as well
 
 def test_delete_items(diff_obj_generator, target_dir):
-    assert Path(target_dir, 'deldir', 'delfile_indir.txt').exists()
     assert Path(target_dir, 'deldir').exists()
 
     execute_filesystem(diff_obj_generator, False, True) # deletes allowed
 
     assert Path(target_dir, 'deldir', 'delfile_indir.txt').exists() == False
+    assert Path(target_dir, 'deldir', '1').exists() == False
     assert Path(target_dir, 'deldir').exists() == False

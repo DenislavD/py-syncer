@@ -1,22 +1,22 @@
 # Syncer
 
-A lightweight incremental file syncer for directories. Copies only changed files from source to target — a simplified, reliable alternative to rsync.
+A lightweight incremental file syncer for directories. Copies only changed files from source to target - a simplified, reliable alternative to rsync.
 
 ## Features
 
-- **Incremental sync** — skips unchanged files, copies only what's new or modified
-- **Two comparison modes** — fast metadata check (size + mtime) or content hash (MD5/SHA1)
-- **Dry-run mode** — preview all planned actions without touching the filesystem
-- **Safe by default** — no deletes unless explicitly enabled with `--delete --confirm`
-- **Exclusion patterns** — skip files/directories matching given patterns
-- **Logging** — all actions logged to stderr and `logs/logfile.log`
+- **Incremental sync** - skips unchanged files, copies only what's new or modified
+- **Two comparison modes** - fast metadata check (size + mtime) or content hash (MD5/SHA1)
+- **Dry-run mode** - preview all planned actions without touching the filesystem
+- **Safe by default** - no deletes unless explicitly enabled with `--delete --confirm`
+- **Exclusion patterns** - skip files/directories matching given patterns
+- **Logging** - all actions logged to stderr and `logs/logfile.log`
 
 ## Installation
 
 Requires Python >= 3.11.
 
 ```bash
-.\\venvsyncer\\Scripts\\activate # Windows
+.\venvsyncer\Scripts\activate # Windows
 source venvsyncer/bin/activate # Linux/Mac
 pip install -e .
 ```
@@ -77,4 +77,4 @@ pytest
 
 ## License
 
-[MIT](LICENSE) — Denislav Dimitrov
+[MIT](LICENSE) - Denislav Dimitrov
