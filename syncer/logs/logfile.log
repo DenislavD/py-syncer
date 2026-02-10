@@ -16,93 +16,41 @@
 2026-01-23 17:32:36: INFO@handler.py~27: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
 2026-01-23 17:32:36: INFO@handler.py~27: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
 2026-01-23 17:32:36: INFO@handler.py~29: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-02-03 13:17:32: INFO@main.py~48: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-03 13:17:32: INFO@handler.py~68: Starting Synchronization process..
-2026-02-03 13:17:32: INFO@handler.py~59: > Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-03 13:17:32: WARNING@handler.py~63: No access rights for C:\Personal\Downloads\Python\screens\norights.txt , skipping item.
-2026-02-03 13:17:32: INFO@handler.py~59: > Copying file: C:\Personal\Downloads\Python\screens\openfile.txt
-2026-02-03 13:17:32: INFO@handler.py~84: Process completed with 1 differring items handled.
-2026-02-03 13:20:07: INFO@main.py~48: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-03 13:20:07: INFO@handler.py~68: Starting Synchronization process..
-2026-02-03 13:20:07: INFO@handler.py~59: > Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-03 13:20:07: WARNING@handler.py~63: No access rights for C:\Personal\Downloads\Python\screens\norights.txt , skipping item.
-2026-02-03 13:20:07: INFO@handler.py~84: Process completed with 0 differring items handled.
-2026-02-04 13:05:03: INFO@main.py~48: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-04 13:05:03: INFO@handler.py~16: Starting Dry run..
-2026-02-04 13:05:03: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-02-04 13:05:03: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-04 13:05:03: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-02-04 13:05:03: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-02-04 14:01:39: INFO@main.py~48: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-04 14:01:39: INFO@handler.py~16: Starting Dry run..
-2026-02-04 14:01:39: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-02-04 14:01:39: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-04 14:01:39: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-02-04 14:01:39: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-02-04 16:35:16: INFO@main.py~49: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-04 16:35:16: INFO@handler.py~16: Starting Dry run..
-2026-02-04 16:35:16: INFO@handler.py~26: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-02-04 16:35:16: INFO@handler.py~24: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-02-04 16:35:16: INFO@handler.py~24: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-02-04 16:35:16: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-02-04 16:35:16: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-02-04 16:35:16: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-04 16:35:16: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-02-09 12:54:02: ERROR@main.py~43: D:\Programming\python\Learning\projects\syncer\a must be a valid directory path.
-2026-02-10 14:21:02: ERROR@main.py~43: D:\Programming\python\Learning\projects\syncer\a must be a valid directory path.
-2026-02-10 15:52:28: INFO@main.py~49: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-10 15:52:28: INFO@handler.py~16: Starting Dry run..
-2026-02-10 15:52:28: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\.git
-2026-02-10 15:52:28: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\__pycache__
-2026-02-10 15:52:28: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-02-10 15:52:28: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-10 15:52:28: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-02-10 15:52:28: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-02-10 15:52:33: INFO@main.py~49: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-10 15:52:33: INFO@handler.py~16: Starting Dry run..
-2026-02-10 15:52:33: INFO@handler.py~26: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-02-10 15:52:33: INFO@handler.py~24: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-02-10 15:52:33: INFO@handler.py~24: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-02-10 15:52:33: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-02-10 15:52:33: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-02-10 15:52:33: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\.git
-2026-02-10 15:52:33: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\__pycache__
-2026-02-10 15:52:33: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-02-10 15:52:33: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-10 15:52:33: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-02-10 15:52:33: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-02-10 15:56:47: INFO@main.py~49: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-10 15:56:47: INFO@handler.py~16: Starting Dry run..
-2026-02-10 15:56:47: INFO@handler.py~26: Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\delfile_indir.txt
-2026-02-10 15:56:47: INFO@handler.py~24: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir\1
-2026-02-10 15:56:47: INFO@handler.py~24: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-02-10 15:56:47: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-02-10 15:56:47: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-02-10 15:56:47: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\.git
-2026-02-10 15:56:47: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\__pycache__
-2026-02-10 15:56:47: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-02-10 15:56:47: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-10 15:56:47: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-02-10 15:56:47: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-02-10 15:57:34: INFO@main.py~49: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-10 15:57:34: INFO@handler.py~16: Starting Dry run..
-2026-02-10 15:57:34: INFO@handler.py~24: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-02-10 15:57:34: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-02-10 15:57:34: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-02-10 15:57:34: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\.git
-2026-02-10 15:57:34: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\__pycache__
-2026-02-10 15:57:34: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-02-10 15:57:34: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-10 15:57:34: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-02-10 15:57:34: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
-2026-02-10 16:02:45: INFO@main.py~49: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
-2026-02-10 16:02:45: INFO@handler.py~16: Starting Dry run..
-2026-02-10 16:02:45: INFO@handler.py~24: Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
-2026-02-10 16:02:45: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\modified.png
-2026-02-10 16:02:45: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
-2026-02-10 16:02:45: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\.git
-2026-02-10 16:02:45: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\__pycache__
-2026-02-10 16:02:45: INFO@handler.py~33: Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
-2026-02-10 16:02:45: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\norights.txt
-2026-02-10 16:02:45: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
-2026-02-10 16:02:45: INFO@handler.py~35: Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
+2026-02-10 17:01:12: INFO@main.py~49: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-02-10 17:01:12: INFO@handler.py~67: Starting Synchronization process..
+2026-02-10 17:01:12: INFO@handler.py~42: > Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
+2026-02-10 17:01:12: INFO@handler.py~58: > Copying file: C:\Personal\Downloads\Python\screens\modified.png
+2026-02-10 17:01:12: INFO@handler.py~45: > Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
+2026-02-10 17:01:12: INFO@handler.py~55: > Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
+2026-02-10 17:01:12: INFO@handler.py~55: > Copying directory recursively: C:\Personal\Downloads\Python\screens\.git
+2026-02-10 17:01:12: INFO@handler.py~58: > Copying file: C:\Personal\Downloads\Python\screens\__pycache__
+2026-02-10 17:01:12: INFO@handler.py~55: > Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
+2026-02-10 17:01:12: INFO@handler.py~58: > Copying file: C:\Personal\Downloads\Python\screens\norights.txt
+2026-02-10 17:01:12: WARNING@handler.py~62: No access rights for C:\Personal\Downloads\Python\screens\norights.txt , skipping item.
+2026-02-10 17:01:12: INFO@handler.py~58: > Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
+2026-02-10 17:01:12: INFO@handler.py~58: > Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
+2026-02-10 17:01:12: INFO@handler.py~73: Process completed with 8 differring items handled.
+2026-02-10 17:51:20: INFO@main.py~48: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-02-10 17:51:20: INFO@handler.py~40: Starting threaded Synchronization process..
+2026-02-10 17:51:20: INFO@handler.py~92: > Copying file: C:\Personal\Downloads\Python\screens\norights.txt
+2026-02-10 17:51:20: WARNING@handler.py~96: No access rights for C:\Personal\Downloads\Python\screens\norights.txt , skipping item.
+2026-02-10 17:51:20: INFO@handler.py~55: Process completed with 0 differring items handled.
+2026-02-10 18:09:56: INFO@main.py~48: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-02-10 18:09:56: INFO@handler.py~40: Starting threaded Synchronization process..
+2026-02-10 18:09:56: INFO@handler.py~92: > Copying file: C:\Personal\Downloads\Python\screens\norights.txt
+2026-02-10 18:09:56: WARNING@handler.py~96: No access rights for C:\Personal\Downloads\Python\screens\norights.txt , skipping item.
+2026-02-10 18:09:56: INFO@handler.py~55: Process completed with 0 differring items handled.
+2026-02-10 18:14:13: INFO@main.py~48: C:\Personal\Downloads\Python\screens -> D:\Programming\python\Learning\projects\syncer\syncer\target
+2026-02-10 18:14:13: INFO@handler.py~40: Starting threaded Synchronization process..
+2026-02-10 18:14:13: INFO@handler.py~76: > Deleting directory: D:\Programming\python\Learning\projects\syncer\syncer\target\deldir
+2026-02-10 18:14:13: INFO@handler.py~92: > Copying file: C:\Personal\Downloads\Python\screens\modified.png
+2026-02-10 18:14:13: INFO@handler.py~79: > Deleting file: D:\Programming\python\Learning\projects\syncer\syncer\target\yeah
+2026-02-10 18:14:13: INFO@handler.py~89: > Copying directory recursively: C:\Personal\Downloads\Python\screens\.git
+2026-02-10 18:14:13: INFO@handler.py~92: > Copying file: C:\Personal\Downloads\Python\screens\__pycache__
+2026-02-10 18:14:13: INFO@handler.py~89: > Copying directory recursively: C:\Personal\Downloads\Python\screens\yeah
+2026-02-10 18:14:13: INFO@handler.py~89: > Copying directory recursively: C:\Personal\Downloads\Python\screens\createdir
+2026-02-10 18:14:13: INFO@handler.py~92: > Copying file: C:\Personal\Downloads\Python\screens\norights.txt
+2026-02-10 18:14:13: INFO@handler.py~92: > Copying file: C:\Personal\Downloads\Python\screens\Screenshot 2025-11-11 183727.png
+2026-02-10 18:14:13: INFO@handler.py~92: > Copying file: C:\Personal\Downloads\Python\screens\yeah\new.txt
+2026-02-10 18:14:13: WARNING@handler.py~96: No access rights for C:\Personal\Downloads\Python\screens\norights.txt , skipping item.
+2026-02-10 18:14:13: INFO@handler.py~55: Process completed with 8 differring items handled.

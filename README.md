@@ -1,6 +1,6 @@
 # Syncer
 
-A lightweight incremental file syncer for directories. Copies only changed files from source to target - a simplified, reliable alternative to rsync.
+A lightweight OS-independent incremental file syncer for directories. Copies only changed files from source to target - a simplified, reliable alternative to rsync.
 
 ## Features
 
@@ -8,6 +8,7 @@ A lightweight incremental file syncer for directories. Copies only changed files
 - **Two comparison modes** - fast metadata check (size + mtime) or content hash (MD5/SHA1)
 - **Dry-run mode** - preview all planned actions without touching the filesystem
 - **Safe by default** - no deletes unless explicitly enabled with `--delete --confirm`
+- **Threading** - supports multi-threaded file operations
 - **Exclusion patterns** - skip files/directories matching given patterns
 - **Logging** - all actions logged to stderr and `logs/logfile.log`
 
@@ -33,7 +34,8 @@ syncer <source-dir> <target-dir> [options]
 |---|---|
 | `-d`, `--dry-run` | List planned actions without modifying files |
 | `-c`, `--confirm` | Confirm replacing existing files |
-| `-x`, `--delete` | Delete extra files in target (requires `--confirm`) |
+| `-x`, `--delete` | Delete extra files in target |
+| `-w`, `--workers INT` | Use more CPU threads |
 | `--hash` | Use hash comparison instead of metadata |
 | `--exclude PATTERNS` | Pipe-separated exclude patterns |
 
@@ -42,13 +44,13 @@ syncer <source-dir> <target-dir> [options]
 Preview what would be synced:
 
 ```bash
-syncer "C:\source" "C:\target" -d
+syncer "./source" "./target" -d
 ```
 
-Sync with deletions and exclusions:
+Sync with deletions, exclusions and threading:
 
 ```bash
-syncer "C:\source" "C:\target" -x -c --exclude ".git|__pycache__|logs"
+syncer "./source" "./target" -x -c --exclude ".git|__pycache__|logs" --workers 4
 ```
 
 ## Project Structure
@@ -73,7 +75,7 @@ pytest
 
 ## Roadmap
 
-- [ ] Parallel copying with `concurrent.futures` (`--workers`)
+- [x] Parallel copying with `concurrent.futures` (`--workers`)
 
 ## License
 

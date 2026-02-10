@@ -32,8 +32,7 @@ def main():
         help='Use hash to compare files instead of metadata.')
     parser.add_argument('--exclude', default='', type=str,
         help='Patterns to exclude from search. Example: .git|__pycache__|logs') # .git, __pycache__ ..
-    # @TODO
-    parser.add_argument('--workers', help='Use more CPU threads.')
+    parser.add_argument('-w', '--workers', type=int, help='Use more CPU threads.')
     args = parser.parse_args()
     print(args)
     
@@ -54,7 +53,7 @@ def main():
     
     client = Client.DRYRUN if args.dry_run else Client.FILESYSTEM
     handler_fn = HANDLER[client]
-    handler_fn(item_generator, args.confirm, args.delete)
+    handler_fn(item_generator, args.confirm, args.delete, args.workers)
 
 
 
