@@ -21,7 +21,7 @@ class Action(StrEnum):
 class Diff:
     source: Path | None
     target: Path | None
-    Action: Action
+    action: Action
 
 class Scanner:
     def __str__(self):
@@ -55,20 +55,20 @@ class Scanner:
         for item in sorted(deletions):
             if item.parent not in deletions: # whole directory to be deleted, skip sub-tree
                 abspath = self.target_dir / item
-                yield Diff(source=None, target=abspath, Action=Action.DELETE)
+                yield Diff(source=None, target=abspath, action=Action.DELETE)
 
         for item in sorted(intersection):
             abspath_source = self.source_dir / item
             abspath_target = self.target_dir / item
             if abspath_source.is_file() or abspath_target.is_file():
                 if not self.compare_files(abspath_source, abspath_target):
-                    yield Diff(source=abspath_source, target=abspath_target, Action=Action.REPLACE)
+                    yield Diff(source=abspath_source, target=abspath_target, action=Action.REPLACE)
 
         for item in sorted(additions):
             if item.parent not in additions: # whole directory to be copied, skip sub-tree
                 abspath_source = self.source_dir / item
                 abspath_target = self.target_dir / item
-                yield Diff(source=abspath_source, target=abspath_target, Action=Action.COPY)
+                yield Diff(source=abspath_source, target=abspath_target, action=Action.COPY)
 
     def compare_files(self, sourcefile, targetfile) -> bool:
         try:

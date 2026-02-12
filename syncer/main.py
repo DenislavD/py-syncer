@@ -16,13 +16,13 @@ logging.basicConfig( # root level, valid for all imports as well
 logging.getLogger('syncer').setLevel(logging.DEBUG)
 
 from .scanner import Scanner, Strategy
-from .handler import Client, HANDLER
+from .handler import ExecutionMode, HANDLER
 
 log = logging.getLogger('syncer.main')
 
 def main():
     # argparse
-    parser = argparse.ArgumentParser(prog='Incremental File Syncer', description='Syncs a source directory to a target.')
+    parser = argparse.ArgumentParser(prog='syncer', description='Syncs a source directory to a target.')
     parser.add_argument('source')
     parser.add_argument('target')
     parser.add_argument('-d', '--dry-run', action='store_true', help='List actions as log items only.')
@@ -34,7 +34,6 @@ def main():
         help='Patterns to exclude from search. Example: .git|__pycache__|logs') # .git, __pycache__ ..
     parser.add_argument('-w', '--workers', type=int, help='Use more CPU threads.')
     args = parser.parse_args()
-    print(args)
     
     # normalize source and target directories
     source_dir = Path(args.source).absolute()
@@ -51,8 +50,8 @@ def main():
     scanner = Scanner(source_dir, target_dir, comparison_strategy, args.exclude)
     item_generator = scanner.run()
     
-    client = Client.DRYRUN if args.dry_run else Client.FILESYSTEM
-    handler_fn = HANDLER[client]
+    mode = ExecutionMode.DRYRUN if args.dry_run else ExecutionMode.FILESYSTEM
+    handler_fn = HANDLER[mode]
     handler_fn(item_generator, args.confirm, args.delete, args.workers)
 
 

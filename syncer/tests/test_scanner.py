@@ -37,7 +37,7 @@ def test_comparison_tmpdir(source_dir, target_dir):
 
     actions = {}
     for diff in scanner.run():
-        actions.setdefault(diff.Action, []).append(diff.target.relative_to(target_dir))
+        actions.setdefault(diff.action, []).append(diff.target.relative_to(target_dir))
 
     # should delete items in order starting from the deepest level
     assert actions['delete'] == [
@@ -59,29 +59,3 @@ def test_exclude_pattern():
     assert all('logs' not in str(file) for file in files)
     assert all('venv' not in str(file) for file in files)
     assert all('README.md' not in str(file) for file in files)
-
-
-
-# def test_fixtures(source_dir, target_dir):
-#     # test only: pytest -s -k test_fixtures
-#     print(f'Received source dir: {source_dir}')
-#     for child in source_dir.iterdir():
-#         print(child)
-#     print(f'Received target dir: {target_dir}')
-#     for child in target_dir.iterdir():
-#         print(child)
-#     assert 1 == 1
-
-
-""" actions dict for reference:
-
-{<Action.COPY: 'copy'>: [WindowsPath('createdir'),                                                                                                                                                         
-                         WindowsPath('norights.txt'),                                                                                                                                                                                   
-                         WindowsPath('Screenshot 2025-11-11 183727.png'),                                                                                                                                                               
-                         WindowsPath('yeah/new.txt')],                                                                                                                                                                                  
- <Action.DELETE: 'delete'>: [WindowsPath('deldir/delfile_indir.txt'),                                                                                                                                                                   
-                             WindowsPath('deldir/1'),                                                                                                                                                                                   
-                             WindowsPath('deldir')],                                                                                                                                                                                    
- <Action.REPLACE: 'replace'>: [WindowsPath('modified.jpg'),                                                                                                                                                                             
-                               WindowsPath('yeah')]} 
-"""
