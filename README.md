@@ -17,6 +17,9 @@ A lightweight OS-independent incremental file syncer for directories. Copies onl
 Requires Python >= 3.11.
 
 ```bash
+git clone https://github.com/DenislavD/py-syncer.git
+cd py-syncer
+python3 -m venv venvsyncer # python on Windows
 .\venvsyncer\Scripts\activate # Windows
 source venvsyncer/bin/activate # Linux/Mac
 pip install -e .
