@@ -9,14 +9,14 @@ from .scanner import Action
 
 log = logging.getLogger('syncer.handler')
 
-class Client(StrEnum):
+class ExecutionMode(StrEnum):
     DRYRUN = 'dry-run'
     FILESYSTEM = 'filesystem'
 
 def execute_dryrun(gen, allow_replace, allow_delete, workers):
     log.info('Starting Dry run..')
     for item in gen:
-        if item.Action == Action.DELETE and allow_delete:
+        if item.action == Action.DELETE and allow_delete:
             if not os.access(item.target, os.W_OK):
                 log.warning(f'No access rights for {item.target} , skipping item.')
                 continue
@@ -25,7 +25,7 @@ def execute_dryrun(gen, allow_replace, allow_delete, workers):
                 log.info(f'Deleting directory: {item.target}')
             else:
                 log.info(f'Deleting file: {item.target}')
-        elif item.Action == Action.REPLACE and allow_replace or item.Action == Action.COPY:
+        elif item.action == Action.REPLACE and allow_replace or item.action == Action.COPY:
             if not os.access(item.source, os.R_OK): # doesn't work on Windows..
                 log.warning(f'No access rights for {item.source} , skipping item.')
                 continue
@@ -37,7 +37,7 @@ def execute_dryrun(gen, allow_replace, allow_delete, workers):
 
 
 def execute_filesystem(gen, allow_replace, allow_delete, workers):
-    log.info(f'Starting {"threaded " if workers else ''}Synchronization process..')
+    log.info(f'Starting {"threaded " if workers else ""}Synchronization process..')
     actions_cnt = 0
     if workers: # threading
         with ThreadPoolExecutor(max_workers=min(abs(workers), 16)) as executor:
@@ -56,17 +56,18 @@ def execute_filesystem(gen, allow_replace, allow_delete, workers):
 
 
 def process_file(item, allow_replace, allow_delete):
-    if item.Action == Action.DELETE and allow_delete: # DELETES FILES !!
+    if item.action == Action.DELETE and allow_delete: # DELETES FILES !!
         return node_delete(item.target)
 
-    if item.Action == Action.REPLACE and allow_replace: # DELETES FILES !!
+    if item.action == Action.REPLACE and allow_replace: # DELETES FILES !!
         if item.source.is_dir() != item.target.is_dir():
             # remove target file/dir, copy-replace doesn't work with different obj types
             node_delete(item.target)
         return node_copy(item.source, item.target)
 
-    if item.Action == Action.COPY and item.target.parent.is_dir():
+    if item.action == Action.COPY and item.target.parent.is_dir():
         return node_copy(item.source, item.target)
+    return False
 
 
 # Helper action functions
@@ -97,7 +98,7 @@ def node_copy(sourcepath, targetpath) -> bool:
         return False
 
 
-HANDLER: dict[Client, Callable] = {
-    Client.DRYRUN: execute_dryrun,
-    Client.FILESYSTEM: execute_filesystem,
+HANDLER: dict[ExecutionMode, Callable] = {
+    ExecutionMode.DRYRUN: execute_dryrun,
+    ExecutionMode.FILESYSTEM: execute_filesystem,
 }

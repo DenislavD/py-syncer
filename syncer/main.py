@@ -16,13 +16,13 @@ logging.basicConfig( # root level, valid for all imports as well
 logging.getLogger('syncer').setLevel(logging.DEBUG)
 
 from .scanner import Scanner, Strategy
-from .handler import Client, HANDLER
+from .handler import ExecutionMode, HANDLER
 
 log = logging.getLogger('syncer.main')
 
-def main():
-    # argparse
-    parser = argparse.ArgumentParser(prog='Incremental File Syncer', description='Syncs a source directory to a target.')
+def create_parser() -> argparse.ArgumentParser:
+    """Creates, configures and returns the argparse object"""
+    parser = argparse.ArgumentParser(prog='syncer', description='Syncs a source directory to a target.')
     parser.add_argument('source')
     parser.add_argument('target')
     parser.add_argument('-d', '--dry-run', action='store_true', help='List actions as log items only.')
@@ -33,10 +33,17 @@ def main():
     parser.add_argument('--exclude', default='', type=str,
         help='Patterns to exclude from search. Example: .git|__pycache__|logs') # .git, __pycache__ ..
     parser.add_argument('-w', '--workers', type=int, help='Use more CPU threads.')
-    args = parser.parse_args()
-    print(args)
+    return parser
+
+def main(args_list=None):
+    """
+    Main entry point.
+    args_list: Optional list of arguments (used for testing). 
+    """
+    parser = create_parser()
+    args = parser.parse_args(args_list) # if None, argparse uses sys.argv automatically
     
-    # normalize source and target directories
+    # validate source and target directories
     source_dir = Path(args.source).absolute()
     if not source_dir.is_dir():
         log.error(f'{source_dir} must be a valid directory path.')
@@ -51,10 +58,9 @@ def main():
     scanner = Scanner(source_dir, target_dir, comparison_strategy, args.exclude)
     item_generator = scanner.run()
     
-    client = Client.DRYRUN if args.dry_run else Client.FILESYSTEM
-    handler_fn = HANDLER[client]
+    mode = ExecutionMode.DRYRUN if args.dry_run else ExecutionMode.FILESYSTEM
+    handler_fn = HANDLER[mode]
     handler_fn(item_generator, args.confirm, args.delete, args.workers)
-
 
 
 if __name__ == '__main__':

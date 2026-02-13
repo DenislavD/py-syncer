@@ -3,7 +3,7 @@ from pathlib import Path
 
 from .. handler import execute_filesystem
 
-# pytest syncer\tests\test_zhandler.py -v -s
+# pytest syncer\tests\test_zhandler.py -v -s -k test_copy_items_threaded
 
 def test_copy_items_threaded(diff_obj_generator, target_dir):
     execute_filesystem(diff_obj_generator, False, False, workers=4)
